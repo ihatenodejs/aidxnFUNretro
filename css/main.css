@@ -1,0 +1,176 @@
+/* Loading animation */
+
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url("https://aidxn.fun/img/loading2.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Used across all different parts of the site */
+
+body {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    overflow: auto;
+    background-color: black;
+}
+
+a {
+    color: white;
+}
+
+blockquote {
+    font-size: 80%;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Sidebar only */
+
+.sidebar {
+    height: 93.7%;
+    width: 20%;
+    background-color: rgb(77, 69, 69);
+    position: fixed;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.sidebar a {
+    color: white;
+    font-size: 100%;
+}
+
+.sidebar b {
+    font-size: 110%;
+}
+
+/* Used for varying font sizes */
+.extra-text {
+    color: white;
+    font-size: 90%;
+}
+
+.extra-text p {
+    margin-top: 0%;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header li a {
+    text-decoration: none;
+    color: white;
+    display: inline;
+    padding-left: 2%
+}
+
+header li b {
+    color: white;
+    display: inline;
+    padding-left: 2%
+}
+
+.logo {
+    width: 88%;
+}
+
+.cap {
+    font-size: 90%;
+    color: white;
+}
+
+.mm-label {
+    padding-top: 5%;
+}
+
+.bullet {
+    width: 5%;
+    padding-top: 5%;
+}
+
+#date {
+    color: white;
+    font-size: 90%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+/* Main content only */
+
+.main-content {
+    color: white;
+    width: 72.5%;
+    max-height: 100%;
+    margin-left: 23%;
+    margin-right: 20%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 1px white solid;
+    overflow: hidden;
+}
+
+.main-content a {
+    text-decoration-color: white;
+}
+
+.main-content h1 {
+    font-size: 215%;
+}
+
+.main-content h3 {
+    font-size: 140%;
+}
+
+.main-content p {
+    font-size: 95%;
+}
+
+.quote {
+    margin-left: 7%;
+    margin-top: -1%;
+    margin-bottom: 1%;
+}
+
+/* Used for now playing display */
+
+.music-section {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 105%;
+    margin-top: 5%;
+}
+
+#album-art {
+    float: left;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+
+#song {
+    font-size: 91%;
+    margin-top: 1%;
+}
+
+#album {
+    font-size: 75%;
+    margin: 0%;
+}
+
+#artist {
+    font-size: 75%;
+    margin-top: 0%;
+}

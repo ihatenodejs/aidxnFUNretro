@@ -1,0 +1,6 @@
+/* This fixes a weird issue with an offset album art image */
+/* You know me: "I'll get to it later" */
+
+#album-art {
+    margin-top: 1%;
+}
