@@ -1,4 +1,4 @@
-const alblabel = document.getElementById("albLabel");
+const albumlabel = document.getElementById("albumLabel");
 const albumart = document.getElementById("album-art");
 const song = document.getElementById("song");
 const artist = document.getElementById("artist");
@@ -11,21 +11,27 @@ async function getLatestSong() {
         if (lsResponse.ok) {
             const latestSongJSON = await lsResponse.json();
             if (!latestSongJSON.track["@attr"]) {
-                alblabel.textContent = "Last Listen:";
-            } else if (latestSongJSON.track["@attr"].nowplaying) {
-                alblabel.textContent = "Now Playing:";
+                albumlabel.textContent = "Last Listen:";
             } else {
-                console.log("[WARN] Invalid value in now playing status, or something else messed up");
-                alblabel.textContent = "Last Listen:";
+                // noinspection JSUnresolvedReference
+                if (latestSongJSON.track["@attr"].nowplaying) {
+                    albumlabel.textContent = "Now Playing:";
+                } else {
+                    console.log("[WARN] Invalid value in now playing status, or something else messed up");
+                    albumlabel.textContent = "Last Listen:";
+                }
             }
+            // noinspection JSUnresolvedReference
             albumart.src = latestSongJSON.track.image[1]["#text"];
             song.textContent = latestSongJSON.track.name;
             artist.textContent = latestSongJSON.track.artist["#text"];
             album.textContent = latestSongJSON.track.album["#text"];
-        } else throw new Error(`Error, response status: ${lsResponse.status}`);
+        } else console.log(`Error: ${lsResponse.status}`);
     } catch (error) {
         console.log(`Error: ${error.message}`);
     }
 }
 
-getLatestSong();
+(async function() {
+    await getLatestSong();
+})();
