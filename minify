@@ -1,0 +1,5 @@
+echo "Minifying files..."
+find src/ -name '*.html' ! -name '*min*' -exec sh -c 'html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o "${0%.html}.min.html" "$0"' {} \;
+find src/css/ -name '*.css' ! -name '*min*' -exec sh -c 'csso "$0" --output "${0%.css}.min.css"' {} \;
+find src/ -name '*.js' ! -name '*min*' -exec sh -c 'terser --compress --mangle --output "${0%.js}.min.js" "$0"' {} \;
+echo "Done!"
