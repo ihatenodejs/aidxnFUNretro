@@ -7,11 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
 </head>
 <body>
-    <div id="loading"></div>
+    <div id="loading" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <img src="img/loading2.gif" alt="Loading animation">
+    </div>
     <div id="page" style="display: none;">
         <header class="sidebar">
             <a href="#"><img src="img/logo.gif" alt="Animated logo text displaying AIDXN ONLINE" class="logo"></a>
@@ -19,13 +21,13 @@
             <img src="img/links.gif" alt="Animated text displaying LINKS" width="30%" class="mm-label">
             <ul>
                 <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><b>home</b></li>
-                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="about.html">about</a></li>
+                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="/about">about</a></li>
                 <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="https://p0ntus.com">archives</a></li>
-                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="contact.html">contact</a></li>
+                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="/contact">contact</a></li>
                 <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="https://aidxn.fun/verify">verify a message</a></li>
-                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="status.html">status</a></li>
-                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="design.html">design</a></li>
-                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="projects.html">projects</a></li>
+                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="/status">status</a></li>
+                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="/design">design</a></li>
+                <li class="menu-opt"><img src="img/bullet.gif" alt="*" class="bullet"><a href="/projects">projects</a></li>
             </ul>
             <img src="img/information.gif" alt="Animated text displaying INFORMATION" width="68%" class="mm-label">
             <p id="date"></p>
@@ -61,7 +63,7 @@
             <p>With this project, I have aimed to adhere to modern HTML5 standards, while emulating the experience of a proper mid-2000s design. Sadly, I wasn't around for when HTML4 was more widespread.</p>
         </aside>
     </div>
-    <script src="js/main.js"></script>
-    <script src="js/music.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/music.min.js"></script>
 </body>
 </html>
