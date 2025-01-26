@@ -23,7 +23,7 @@ jobs:
 
       - name: Install minification tools
         run: |
-          npm install -g html-minifier-terser csso-cli terser
+          npm install -g html-minifier-terser csso-cli
 
       - name: Minify HTML files
         run: |
@@ -33,10 +33,6 @@ jobs:
         run: |
           find src/css/ -name '*.css' ! -name '*min*' -exec sh -c 'csso "$0" --output "${0%.css}.min.css"' {} \;
 
-      - name: Minify JS files
-        run: |
-          find src/ -name '*.js' ! -name '*min*' -exec sh -c 'terser --compress --mangle --output "${0%.js}.min.js" "$0"' {} \;
-
       - name: Commit and push changes
         env:
           USERNAME_GITEA: ${{ secrets.USERNAME_GITEA }}
@@ -44,7 +40,7 @@ jobs:
         run: |
           git config --global user.name "LibreCloud Actions Bot"
           git config --global user.email "git@pontusmail.org"
-          git remote set-url origin https://${USERNAME_GITEA}:${TOKEN_GITEA}@git.pontusmail.org/aidan/aidxnFUNretro.git
+          git remote set-url origin https://${USERNAME_GITEA}:${TOKEN_GITEA}@git.pontusmail.org/aidan/pontus.git
           git add .
           git commit -m "[bot] Minifying HTML and CSS automatically"
           git push origin main
